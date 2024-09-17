@@ -3,6 +3,7 @@ import { selectAllBlogs } from "./blogSlice";
 import { selectAllusers } from "../user/userSlice";
 import { User } from "../../types";
 import { TimeAgo } from "./timeago";
+import { ReactionButtons } from "./reactionButton";
 export const DisplayBlog = () => {
   const blogs = useSelector(selectAllBlogs);
   const allUsers = useSelector(selectAllusers);
@@ -25,6 +26,7 @@ export const DisplayBlog = () => {
         <p className="postCredit">Author Name: {userName}</p>
         <TimeAgo timestamp={date} />
         </div>
+        <ReactionButtons blog={b} />
       </article>
     );
   });

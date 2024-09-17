@@ -9,4 +9,13 @@ export interface Blog {
   title: string;
   content: string;
   date: string;
+  reactions: {
+    thumbsup: number;
+    love: number;
+    wow: number;
+    clap: number;
+    funny: number;
+  };
 }
+
+export type ReactionTypes = "thumbsup" | "love" | "wow" | "clap" | "funny";
