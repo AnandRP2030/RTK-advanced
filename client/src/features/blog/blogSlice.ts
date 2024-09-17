@@ -1,8 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { nanoid } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-const initialState = [
-  { id: "1", title: "Blog 1", content: "Content 1" },
+import { Blog } from "../../types";
+import { sub } from "date-fns";
+const initialState: Blog[] = [
+  {
+    id: "1",
+    userId: "",
+    title: "Blog 1",
+    content: "Content 1",
+    date: sub(new Date(), { minutes: 0 }).toISOString(),
+  },
 ];
 
 export const blogSlice = createSlice({
@@ -10,9 +18,13 @@ export const blogSlice = createSlice({
   initialState,
   reducers: {
     addBlog: (state, action) => {
-      const { title, content } = action.payload;
+      const { title, content, userId } = action.payload;
+      const id = nanoid();
+      const date = sub(new Date(), { minutes: 0 }).toISOString();
       const newBlog = {
-        id: nanoid(),
+        id,
+        userId,
+        date,
         title,
         content,
       };

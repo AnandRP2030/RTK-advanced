@@ -67,3 +67,13 @@ form {
   color: whitesmoke;
   font-size: 1rem;
 }
+
+.timeago {
+  font-size: 12px;
+}
+
+.flex-bw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
