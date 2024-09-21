@@ -3,6 +3,7 @@ import { RootState } from "../../app/store";
 import { User } from "../../types";
 
 
+
 const initialState: User[] = [
   { id: "1", name: "mark" },
   { id: "2", name: "elon" },

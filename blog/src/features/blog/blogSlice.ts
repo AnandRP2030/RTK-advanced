@@ -9,6 +9,7 @@ interface UpdateReactType {
   reaction: ReactionTypes;
 }
 
+
 const initialState: Blog[] = [
   {
     id: "1",

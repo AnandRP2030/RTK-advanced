@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { selectAllBlogs } from "./blogSlice";
 import { selectAllusers } from "../user/userSlice";
 import { User } from "../../types";
-import { TimeAgo } from "./timeago";
+import { TimeAgo } from "./timeAgo";
 import { ReactionButtons } from "./reactionButton";
 export const DisplayBlog = () => {
   const blogs = useSelector(selectAllBlogs);
